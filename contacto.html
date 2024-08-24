@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Restaurante a tu gusto</title>
+    <link rel="stylesheet" href="css/contactoo.css">
+</head>
+<body>
+
+<div class="banner">
+    <h1>Contacto</h1>
+</div>
+
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="reservaciones.html">Reservaciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+<div class="text-content">
+    <h2>Contáctanos</h2>
+    <p>Complete el siguiente formulario para ponerse en contacto con nosotros.</p>
+</div>
+
+<div class="contact-form">
+    <form action="procesar_contacto.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+<footer>
+    <p>
+        &copy; 2024 Nuestra Empresa. Todos los derechos reservados
+    </p>
+</footer>
+
+</body>
+</html>

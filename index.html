@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante a tu gusto</title>
+    <link rel="stylesheet" href="css/indeex.css">
+</head>
+<body>
+
+<div class="banner">
+    <h1>Bienvenido a Restaurante a tu gusto</h1>
+</div>
+
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="reservaciones.html">Reservaciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+<div class="carousel">
+    <div class="slide">
+        <img src="img/f153c872c5ed5924610210b94cfd1d4e.jpg" alt="Plato 1">
+        <div class="caption">Plato 1</div>
+    </div>
+    <div class="slide">
+        <img src="img/0d3ea81507bc63d878c2cdb33121602f.jpg" alt="Plato 2">
+        <div class="caption">Plato 2</div>
+    </div>
+    <div class="slide">
+        <img src="img/650c3e034c568.png" alt="Plato 3">
+        <div class="caption">Plato 3</div>  
+    </div>
+    <div class="slide">
+        <img src="img/preview-gallery-001.jpg" alt="Plato 4">
+        <div class="caption">Plato 4</div>
+    </div>
+    <div class="slide">
+        <img src="img/HTTK5BQO4NHKZGCHKSFZQGXFYA.gif" alt="Plato 5">
+        <div class="caption">Plato 5</div>
+    </div>
+    <div class="slide">
+        <img src="img/perurocotojpg.webp" alt="Plato 6">
+        <div class="caption">Plato 6</div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<div class="images">
+    <img src="img/S9-Blog4-Featured.webp" alt="Interior del Restaurante" class="rounded">
+    <img src="img/325032_669936.jpg" alt="Nuestro Chef" class="rounded">
+</div>
+
+<div class="text-content">
+    <h2>Sobre Nosotros</h2>
+    <p>Restaurante a tu gusto ofrece una experiencia culinaria única con una variedad de platos deliciosos y un ambiente acogedor.</p>
+</div>
+
+
+    </div>
+    <div class="container my-4 text-center">
+    <div class="links">
+        <a href="pagina1.html" class="btn btn-outline-primary mx-2">promociones</a>
+        <a href="pagina2.html" class="btn btn-outline-primary mx-2">equipo</a>
+    </div>
+</div>  
+
+</div>
+
+
+<div class="text-content">
+    <h2>Nuestros Locales</h2>
+    <p>Estamos ubicados en varios lugares para estar siempre cerca de ti. Ven y disfruta de nuestra cocina en cualquiera de nuestros locales:</p>
+    <ul>
+        <li>
+            <h3>Local Miraflores</h3>
+            <p>Dirección: Calle de las Pizzas 456, Miraflores, Lima, Perú</p>
+            <p>Teléfono: (01) 987-6543</p>
+            <p>Horario: Lunes a Sábado, 1:00 PM - 11:00 PM</p>
+        </li>
+        <li>
+            <h3>Local San Isidro</h3>
+            <p>Dirección: Av. Camino Real 789, San Isidro, Lima, Perú</p>
+            <p>Teléfono: (01) 321-4321</p>
+            <p>Horario: Martes a Domingo, 12:00 PM - 9:00 PM</p>
+        </li>
+        <li>
+            <h3>Local Barranco</h3>
+            <p>Dirección: Jr. Unión 111, Barranco, Lima, Perú</p>
+            <p>Teléfono: (01) 876-5432</p>
+            <p>Horario: Miércoles a Domingo, 4:00 PM - 12:00 AM</p>
+        </li>
+        <li>
+            <h3>Local Surco</h3>
+            <p>Dirección: Av. Primavera 987, Surco, Lima, Perú</p>
+            <p>Teléfono: (01) 654-3210</p>
+            <p>Horario: Lunes a Viernes, 12:00 PM - 10:00 PM</p>
+        </li>
+      
+    </ul>
+</div>
+
+<script>
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+function moveSlide(direction) {
+    currentIndex = (currentIndex + direction + slides.length) % slides.length;
+    showSlide(currentIndex);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentIndex);
+    setInterval(() => {
+        moveSlide(1);
+    }, 3000);
+});
+</script>
+<footer>
+    <p>
+        &copy; 2024 Nuestra Empresa. Todos los derechos reservados
+    </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0; 
+    color: #333;
+}
+
+.banner {
+    background-color: rgb(52, 142, 136);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
+}
+
+.menu {
+    background-color: #333;
+    border-radius: 10px; 
+    margin: 20px auto;
+    max-width: 800px; 
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; 
+}
+
+.menu ul li a:hover {
+    background-color: #575757;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px; 
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.carousel .slide img {
+    width: 100%;
+    border-radius: 10px; 
+}
+
+.carousel .slide .caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px; 
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.images img {
+    width: 50%; /* Ajusta esto según el tamaño deseado */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+    margin: 0 5px; /* Margen opcional entre imágenes */
+}
+
+.text-content {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 800px; 
+}
+
+.text-content h2 {
+    color: #348e88;
+    margin-bottom: 20px; 
+}
+
+.text-content p {
+    color: #666;
+    line-height: 1.6; 
+}
+
+.links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.links a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.links a:hover {
+    border-bottom: 2px solid #4CAF50; 
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    max-width: 800px; 
+    margin: 20px auto; 
+    background-color: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.products-table th, .products-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px; 
+    text-align: left;
+}
+
+.products-table th {
+    background-color: #4CAF50; 
+    color: white;
+    text-align: left;
+}
+
+.products-table td {
+    background-color: #f9f9f9;
+}
+
+.products-table tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.testimonials {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 800px; 
+}
+
+.testimonial {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.testimonial p {
+    margin: 0;
+    color: #333;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 800px; 
+}
+
+.team-member {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.team-member h4 {
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .carousel .slide img,
+    .images img {
+        width: 100%; 
+        max-width: none;
+    }
+
+    .team-member {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .text-content, .testimonials {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex; /* Usar flexbox para alinear las imágenes en un nivel */
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten en varias filas si es necesario */
+    justify-content: space-around; /* Espacio uniforme entre las imágenes */
+}
+
+.team-member img {
+    width: 200px; /* Ajusta esto según el tamaño deseado */
+    height: 200px; /* Mantiene las imágenes cuadradas */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el área del contenedor */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
